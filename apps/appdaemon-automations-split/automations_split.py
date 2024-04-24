@@ -7,8 +7,8 @@ split_automation:
   class: SplitAutomation
   schedule_type: time  # Use "time" or "cron"
   schedule_value: 16:30  # Specify the time in "HH:MM" format or a cron expression
-  split_directory: /config/custom_configs/automations  # Optional. Defaults to "/config/custom_configs/automations"
-  automations_file: /config/automations.yaml  # Optional. Defaults to "/homeassistant/automations.yaml"
+  split_directory: /homeassistant/custom_configs/automations  # Optional. Defaults to "/config/custom_configs/automations"
+  automations_file: /homeassistant/automations.yaml  # Optional. Defaults to "/homeassistant/automations.yaml"
 ```
 """
 
