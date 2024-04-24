@@ -8,7 +8,7 @@ split_automation:
   schedule_type: time  # Use "time" or "cron"
   schedule_value: 16:30  # Specify the time in "HH:MM" format or a cron expression
   split_directory: /config/custom_configs/automations  # Optional. Defaults to "/config/custom_configs/automations"
-  automations_file: /config/automations.yaml  # Optional. Defaults to "/config/automations.yaml"
+  automations_file: /config/automations.yaml  # Optional. Defaults to "/homeassistant/automations.yaml"
 ```
 """
 
@@ -23,8 +23,8 @@ class SplitAutomation(hass.Hass):
 
     def initialize(self):
         # Get configuration values or use defaults
-        self.split_dir = self.args.get("split_directory", "/config/custom_configs/automations")
-        self.automations_file = self.args.get("automations_file", "/config/automations.yaml")
+        self.split_dir = self.args.get("split_directory", "/homeassistant/custom_configs/automations")
+        self.automations_file = self.args.get("automations_file", "/homeassistant/automations.yaml")
 
         self.schedule_type = self.args.get("schedule_type", "time")  # "time" or "cron"
         self.schedule_value = self.args.get("schedule_value", "16:41")  # Time or cron expression
